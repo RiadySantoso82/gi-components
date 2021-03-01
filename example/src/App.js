@@ -1,7 +1,6 @@
 import React, {useState } from 'react'
 
-import { InputText, Btn, ModalBox, MsgBox, DialogAsk, MsgModal, NumericInput } from 'gi-components'
-import 'gi-components/dist/index.css'
+import { InputText, Btn, ModalBox, MsgBox, DialogAsk, MsgModal, NumericInput, BrowseInput } from 'gi-components'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 const App = () => {
@@ -10,6 +9,7 @@ const App = () => {
   const [msg, setMsg] = useState('');
   const [msgAsk, setMsgAsk] = useState('');
   const [msgModal, setMsgModal] = useState('');
+  const [valBrowse, setValBrowse] = useState('ABC Test');
 
   const showErr = () => {
     setIsErr(true)
@@ -37,6 +37,7 @@ const App = () => {
         setMsgModal('')
         setIsErr(false)
       }} isErr={isErr}/>
+      <BrowseInput caption='Browse Test' value={valBrowse} onClick={() => console.log('Click Me')} onClickClear={() => setValBrowse('')}/>
       <InputText placeholder='test' caption='Text'/>
       <NumericInput caption='Number' />
       <Btn onClick={() => setShowModal(!showModal)}>Show Modal Box</Btn>

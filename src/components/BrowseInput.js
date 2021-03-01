@@ -12,6 +12,7 @@ const BrowseInput = (props) => (
         <FormControl placeholder={props.placeholder || props.caption} value={props.value || ''} disabled />
         <InputGroup.Append>
           <Button variant="outline-secondary" onClick={props.onClick}>Browse</Button>
+          <Button variant="outline-secondary" onClick={props.onClickClear}>Clear</Button>
         </InputGroup.Append>
       </InputGroup>
     }

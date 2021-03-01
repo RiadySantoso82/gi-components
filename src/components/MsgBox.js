@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
-import { Button, Alert } from 'react-bootstrap';
+import { Alert } from 'react-bootstrap';
+import Btn from '../components/Btn';
 
 const MsgBox = (props) => (
   <Alert show={!!props.msg} variant={props.isErr ? 'danger' : 'success'}>
@@ -7,7 +8,7 @@ const MsgBox = (props) => (
     <p>{props.msg}</p>
     <hr />
     <div className="d-flex justify-content-end">
-      <Button onClick={props.onClickClose}>Close</Button>
+      <Btn onClick={props.onClickClose}>Close</Btn>
     </div>
   </Alert>
 );
